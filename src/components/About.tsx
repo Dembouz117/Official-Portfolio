@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from "../styles/About.module.css";
 import ShineCard from './ShineCard';
 
-import { MdMouse } from "react-icons/md/index";
+import { MdMouse } from "react-icons/md/index.esm";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const AboutMe = () => {
