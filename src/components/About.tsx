@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from "../styles/About.module.css";
 import ShineCard from './ShineCard';
 
-import { MdMouse } from "react-icons/md/index.esm";
+// import { MdMouse } from "react-icons/md/index.esm";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const AboutMe = () => {
@@ -51,7 +51,7 @@ const AboutMe = () => {
         </div>
         <div className="text-white font-bungee font-extralight mt-6 flex items-center space-x-2 w-auto h-auto">
             <div>Scroll</div>
-            <MdMouse className="animate-shake"/>
+            {/* <MdMouse className="animate-shake"/> */}
         </div>
 
       </div>
