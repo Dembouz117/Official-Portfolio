@@ -24,7 +24,7 @@ const AboutMe = () => {
   },[]);
   
   return (
-    <ShineCard className={`bg-blue-300 relative text-white w-full h-auto mt-12 rounded-3xl overflow-hidden space-y-6 p-4 transition-transform ${fadeIn?"scale-100":"scale-0"} ease-out duration-3000`}>
+    <ShineCard className={`bg-blue-300 relative text-white w-1/2 h-auto mt-12 rounded-3xl overflow-hidden space-y-6 p-4 transition-transform ${fadeIn?"scale-100":"scale-0"} ease-out duration-3000`}>
 
       <div className="text-white font-bungee text-6xl font-bold">
         About Me

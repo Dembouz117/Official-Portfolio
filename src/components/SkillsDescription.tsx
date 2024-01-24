@@ -14,7 +14,7 @@ interface SkillsDescriptionProps{
 const SkillsDescription:React.FC<SkillsDescriptionProps> = ({ className = '', skillName, skillList }) => {
 
   return (
-    <div className="w-[50rem] rounded-3xl h-11/12 flex flex-col justify-center font-bungee text-white">
+    <div className="w-[50rem] rounded-3xl h-11/12 flex flex-col justify-center font-bungee text-white top-[8rem] relative">
       <div className={`w-full shadow-md rounded-md p-4 ${className} h-full`}>
         {/* <div className="mb-8 text-[6rem]">Skills</div> */}
         <div className="mb-8 text-2xl">{skillName}</div>

@@ -2,14 +2,18 @@ import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 
+import About from "./About";
+// import RadialMenu from "./RadialMenu";
+import SkillsModal from "./SkillsModal";
+
 const Section = (props) => {
-  const { children } = props;
+  const { children, className } = props;
 
   return (
     <motion.section
       className={`
   h-screen w-screen p-8 max-w-screen-2xl mx-auto
-  flex flex-col items-start justify-center
+  flex flex-col items-start justify-center ${className?className:""}
   `}
       initial={{
         opacity: 0,
@@ -45,10 +49,10 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section>
-      <h1 className="text-6xl font-extrabold leading-snug">
+      <h1 className="text-6xl font-extrabold leading-snug font-bungee">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span className="bg-white px-1 italic">Fadhel</span>
       </h1>
       <motion.p
         className="text-lg text-gray-600 mt-4"
@@ -65,10 +69,9 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
-        <br />
-        learn how to build 3D apps
+        Aspiring Fullstack Software Engineer <br/> based in Singapore
       </motion.p>
+      <About/>
       <motion.button
         onClick={() => setSection(3)}
         className={`bg-indigo-600 text-white py-4 px-8 
@@ -114,113 +117,13 @@ const skills = [
     level: 40,
   },
 ];
-const languages = [
-  {
-    title: "🇫🇷 French",
-    level: 100,
-  },
-  {
-    title: "🇺🇸 English",
-    level: 80,
-  },
-  {
-    title: "🇯🇵 Japanese",
-    level: 20,
-  },
-];
+
 
 const SkillsSection = () => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-white">Skills</h2>
-        <div className=" mt-8 space-y-4">
-          {skills.map((skill, index) => (
-            <div className="w-64" key={index}>
-              <motion.h3
-                className="text-xl font-bold text-gray-100"
-                initial={{
-                  opacity: 0,
-                }}
-                variants={{
-                  visible: {
-                    opacity: 1,
-                    transition: {
-                      duration: 1,
-                      delay: 1 + index * 0.2,
-                    },
-                  },
-                }}
-              >
-                {skill.title}
-              </motion.h3>
-              <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                <motion.div
-                  className="h-full bg-indigo-500 rounded-full "
-                  style={{ width: `${skill.level}%` }}
-                  initial={{
-                    scaleX: 0,
-                    originX: 0,
-                  }}
-                  variants={{
-                    visible: {
-                      scaleX: 1,
-                      transition: {
-                        duration: 1,
-                        delay: 1 + index * 0.2,
-                      },
-                    },
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div>
-          <h2 className="text-5xl font-bold mt-10 text-white">Languages</h2>
-          <div className=" mt-8 space-y-4">
-            {languages.map((lng, index) => (
-              <div className="w-64" key={index}>
-                <motion.h3
-                  className="text-xl font-bold text-gray-100"
-                  initial={{
-                    opacity: 0,
-                  }}
-                  variants={{
-                    visible: {
-                      opacity: 1,
-                      transition: {
-                        duration: 1,
-                        delay: 2 + index * 0.2,
-                      },
-                    },
-                  }}
-                >
-                  {lng.title}
-                </motion.h3>
-                <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                  <motion.div
-                    className="h-full bg-indigo-500 rounded-full "
-                    style={{ width: `${lng.level}%` }}
-                    initial={{
-                      scaleX: 0,
-                      originX: 0,
-                    }}
-                    variants={{
-                      visible: {
-                        scaleX: 1,
-                        transition: {
-                          duration: 1,
-                          delay: 2 + index * 0.2,
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <motion.div whileInView={"visible"} className="w-full">
+        <SkillsModal/>
       </motion.div>
     </Section>
   );
@@ -239,7 +142,7 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 items-center justify-center">
+      <div className="flex w-full h-full gap-8 items-center justify-center relative top-[12rem]">
         <button
           className="hover:text-indigo-600 transition-colors"
           onClick={previousProject}

@@ -46,7 +46,7 @@ const SkillsModal = () => {
   }
 
   return (
-  <div className="flex w-11/12 h-[36rem] inline-block justify-between bg-gray-900 px-6 py-2 mt-4 rounded-3xl">
+  <div className="flex w-full h-[36rem] inline-block justify-between px-6 py-2 mt-4 rounded-3xl">
     <RadialMenu className="w-1/4">
         {skills.map(skill => {
           const matchedSkillName = selectedSkill === skill.skillName;

@@ -35,21 +35,21 @@ const ThreeDText = () => {
 export const projects = [
   {
     title: "TicketPulse",
-    url: "https://r3f-wawatmos-final.vercel.app/",
-    image: "projects/wawatmos.jpg",
+    url: "https://github.com/Dembouz117/Ticket-Pulse",
+    image: "https://dembouz-portfolio.s3.ap-southeast-1.amazonaws.com/ticketpulse-logo.png",
     description: "Performant Ticket Application using Microservice and gRPC",
   },
 
   {
     title: "QNN",
-    url: "https://www.youtube.com/watch?v=pGMKIyALcK0",
-    image: "projects/avatar.jpg",
+    url: "https://www.linkedin.com/in/fadhel117/overlay/1635533193992/single-media-viewer?type=DOCUMENT&profileId=ACoAADiR320BOn39t2yxJkZxT_PFhzp-ikWbcxY&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BgOjCRdrcQdWtIKkBSC%2F82A%3D%3D",
+    image: "https://dembouz-portfolio.s3.ap-southeast-1.amazonaws.com/softserve-logo.jpeg",
     description: "Prediction of Asian Options pricing using a hybrid quantum-classical neural network for DBS",
   },
   {
     title: "ConnectMe",
-    url: "https://www.youtube.com/watch?v=zwNF1-lsia8",
-    image: "projects/kanagame.jpg",
+    url: "https://dembouz-portfolio.s3.ap-southeast-1.amazonaws.com/ConnectMe.mp4",
+    image: "https://dembouz-portfolio.s3.ap-southeast-1.amazonaws.com/connectMe.jpg",
     description: "A mobile application to encourage members of the community to bond. Built with React Native, Express and Firestore",
   },
 ];

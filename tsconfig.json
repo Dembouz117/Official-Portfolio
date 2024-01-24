@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es2021",         // Specify the ECMAScript target version
+      "module": "commonjs",      
+      "strict": true,             
+      "esModuleInterop": true,   
+      "forceConsistentCasingInFileNames": true, 
+      "rootDir": "./src",         
+      "declaration": true,    
+      "sourceMap": true           
+    },
+    "include": ["src/**/*.ts"],   // Files to include in the compilation
+    "exclude": ["node_modules"]   // Files to exclude from the compilation
+  }
+  
